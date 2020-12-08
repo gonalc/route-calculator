@@ -1,0 +1,39 @@
+.toggleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleContainer {
+    width: 40px;
+    background-color: #eee;
+    border-radius: 2000px;
+    height: 20px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.errorMessageContainer p {
+    color: red;
+    text-align: center;
+    font-weight: 500;
+}
+
+.circleContainer.right .innerCircle {
+    transform: translateX(20px);
+}
+
+.innerCircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 3000px;
+    background-color: #a316b4;
+    transition: transform .3s ease-in-out;
+}
+
+.pricesContainer {
+    margin: auto;
+    max-width: 300px;
+    border: 1px solid #a316b4;
+    border-radius: 10px;
+}

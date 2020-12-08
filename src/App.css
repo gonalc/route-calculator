@@ -1,39 +1,41 @@
 .App {
   text-align: center;
+  padding-bottom: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: 'Montserrat', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+h1, h2, h3, button {
+  font-weight: 500;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+p,
+input,
+li,
+a {
+  font-weight: 300;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+input {
+  padding: 5px 10px;
+  border: 1px solid #a316b4;
+  border-radius: 10px;
+  margin: 5px 0;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+button {
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  background-color: #a316b4;
+  border-radius: 10px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: box-shadow .3s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0, 5px, 15px, rgba(0, 0, 0, .15px);
 }
