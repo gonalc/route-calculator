@@ -6,11 +6,9 @@ import {
 } from './formSlice';
 import styles from './Form.module.css';
 import { geocodingPlace, getOptimizedRoute } from '../../data';
-import Loader from '../../components/Loader';
 
 const Form = () => {
     const dispatch = useDispatch();
-    // const [loading, setLoading] = useState<boolean>(false);
     const [manualMode, setManualMode] = useState<boolean>(true);
     const [errorMessage, setErrorMessage] = useState<string>('');
     // Manual mode
@@ -39,16 +37,6 @@ const Form = () => {
         }
     };
 
-    const submitManualForm = (e: FormEvent) => {
-        e.preventDefault();
-        console.log({ distance });
-    }
-
-    // if (loading) {
-    //     return (
-    //         <Loader />
-    //     );
-    // }
     return (
         <div className='Form'>
             <h1>Calculate route price</h1>
@@ -68,17 +56,15 @@ const Form = () => {
             {manualMode ? (
                 <>
                     <p>Enter distance in meters.</p>
-                    <form onSubmit={(e) => submitManualForm(e)}>
-                        <div className="inputContainer distance">
-                            <input
-                                type="number"
-                                placeholder="Distance in meters"
-                                min="0"
-                                onChange={(e) => setDistance(Number(e.target.value))}
-                                value={distance}
-                            />
-                        </div>
-                    </form>
+                    <div className="inputContainer distance">
+                        <input
+                            type="number"
+                            placeholder="Distance in meters"
+                            min="0"
+                            onChange={(e) => setDistance(Number(e.target.value))}
+                            value={distance}
+                        />
+                    </div>
                 </>
             ) : (
                     <form onSubmit={(e) => submitForm(e)}>
